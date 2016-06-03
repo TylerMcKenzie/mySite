@@ -33,7 +33,8 @@ controllers.controller("HomeController", ['$scope', '$location', 'myJquery', '$i
       myJquery.scrollTo(id)
     
     carousels = myJquery.startCarousels()
-    
+    carouselHover = myJquery.carouselHoverText()
+
     $scope.$on('$destroy', () ->
       if angular.isDefined(carousels)
         $interval.cancel(carousels)
@@ -65,4 +66,14 @@ app.factory('myJquery', ($interval) ->
         )
       )
     int = $interval(start, 5000)
+  carouselHoverText: () ->
+    $(".hover-t").mouseenter( 
+      () ->
+        div = $(this).siblings(".hover-text")
+        $(div).fadeIn(300)
+      )
+    $(".hover-text").mouseleave(
+      () ->
+        $(this).fadeOut(300)
+        )
 )

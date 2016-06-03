@@ -26,7 +26,6 @@ body {
 	  text-align: center;
 	  vertical-align: middle;
 	  line-height: 100px;
-	  // opacity: 0.8;
 	  transition: transform .25s ease, opacity .25s ease;
 	  &:hover {
 	    opacity: 1;
@@ -122,6 +121,8 @@ body {
 
 #projects {
   text-align: center;
+  margin-top: 100px;
+  // background-color: #C43C12;
   ul#projects_ul {
     list-style: none;
     padding: 0;
@@ -136,6 +137,7 @@ body {
   float: left;
   width: 600px;
   overflow: hidden;
+  box-shadow: 0 1px 5px black;
   ul {
     position: relative;
     margin: 0;
@@ -146,13 +148,29 @@ body {
       float: left;
       width: 600px;
       padding: 0;
-      height: 400px;
+      height: 350px;
       margin: 10px 5px;
       img {
-        width: 600px;
+      width: 600px;
         height: 350px;
       }
     }
+  }
+}
 
+.hover-text {
+  position: absolute;
+  text-align: center;
+  line-height: 370px;
+  display: none;
+  p {
+    width: 600px;
+    height: 370px;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    color: white;
+    font-weight: bold;
   }
 }
