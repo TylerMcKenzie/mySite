@@ -1,0 +1,32 @@
+#site-info {
+  background-image: url("blackground.jpeg");
+  background-repeat: no-repeat;
+  background: cover;
+  margin: 0;
+  padding: 0;
+  height: 625px;
+  text-align: center;
+  div {
+  	padding-top: 215px;
+  	opacity: 0.95;
+    div#info {
+  	  width: 75%;
+	  background-color: red;
+  	  margin: 0 auto;
+  	  padding: 20px;
+  	  border-radius: 5px;
+  	  border: 2px solid black;
+  	  font-size: 20px;
+  	  color: white;
+  	  box-shadow: 0 0 5px grey;
+  	  a {
+  	  	text-decoration: none;
+  	  	color: black;
+  	  	&:hover {
+  	  		font-weight: bold;
+  	  		text-decoration: underline;
+  	  	}
+  	  }
+    }
+  }
+}
