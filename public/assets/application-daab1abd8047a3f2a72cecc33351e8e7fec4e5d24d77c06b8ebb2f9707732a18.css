@@ -1,0 +1,294 @@
+/* line 1, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arvo', serif;
+}
+
+/* line 7, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav {
+  background-image: url("/white-red-ovals-cool-ppt-backgrounds-powerpoint-compressor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  text-align: center;
+  line-height: 600px;
+  box-shadow: 0 10px 10px -5px #8c8b8b;
+}
+/* line 15, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav ul {
+  margin: 0;
+  list-style: none;
+}
+/* line 18, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav ul li {
+  margin: 0 2.5%;
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  border: 5px solid #780703;
+  background-color: #EA0303;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  transition: transform .25s ease, opacity .25s ease;
+}
+/* line 30, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav ul li:hover {
+  opacity: 1;
+  box-shadow: 2px 2px 10px black;
+  transform: scale(1.1);
+}
+/* line 35, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav ul li:active {
+  position: relative;
+  border: 5px solid #EA0303;
+  background-color: #9D0C07;
+  box-shadow: 0px 0px 4px black;
+  left: 3px;
+  top: 3px;
+}
+/* line 43, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+/* line 51, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav #about {
+  position: absolute;
+  padding: 5px 20px;
+  height: 30px;
+  top: 450px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 15px;
+  border: 1px solid #780703;
+  border-radius: 10px;
+  color: white;
+  background-color: #EA0303;
+  box-shadow: 0 0px 13px black;
+  opacity: 0.95;
+}
+/* line 69, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav #name {
+  position: absolute;
+  width: 100%;
+  line-height: 0px;
+  top: 60px;
+  background-color: #780703;
+}
+/* line 75, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav #name p {
+  padding: 0;
+  color: white;
+  font-size: 45px;
+  text-shadow: 2px 2px 10px black;
+}
+/* line 81, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav #name a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #780703;
+  border-radius: 5px;
+  transition: box-shadow .25s ease, background-color .5s ease;
+}
+/* line 88, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#nav #name a:hover {
+  box-shadow: 0 0 10px yellow;
+  background-color: red;
+}
+
+/* line 96, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#contact {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+/* line 100, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#contact ul {
+  list-style: none;
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+}
+/* line 105, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#contact ul li {
+  display: inline-block;
+  padding: 0 2%;
+}
+/* line 108, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#contact ul li img {
+  width: 32px;
+  height: 32px;
+}
+
+/* line 116, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: .5;
+}
+/* line 125, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+.hr-text:before {
+  content: '';
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+/* line 134, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  color: #818078;
+  background-color: #fcfcfa;
+}
+
+/* line 147, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#projects {
+  text-align: center;
+  margin-top: 100px;
+}
+/* line 151, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#projects #projects_ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 155, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#projects #projects_ul li {
+  display: inline-block;
+  margin: 0;
+}
+
+/* line 162, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#pens {
+  text-align: center;
+}
+/* line 164, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+#pens #pens_ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 171, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+.carousel_inner {
+  float: left;
+  width: 600px;
+  overflow: hidden;
+  box-shadow: 0 1px 5px black;
+}
+/* line 176, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+.carousel_inner ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 9999px;
+  list-style: none;
+}
+/* line 182, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+.carousel_inner ul li {
+  float: left;
+  width: 600px;
+  padding: 0;
+  padding-right: 10px;
+  height: 350px;
+  margin: 10px 5px;
+  display: inline-block;
+}
+/* line 190, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+.carousel_inner ul li img {
+  width: 600px;
+  height: 350px;
+}
+
+/* line 198, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+.hover-text {
+  position: absolute;
+  text-align: center;
+  line-height: 370px;
+  display: none;
+}
+/* line 203, /vagrant/myWebsite/app/assets/stylesheets/home.scss */
+.hover-text p {
+  width: 600px;
+  height: 350px;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  color: white;
+  font-weight: bold;
+}
+/* line 1, /vagrant/myWebsite/app/assets/stylesheets/site_info.scss */
+#site-info {
+  background-image: url("/blackground-compressor.jpeg");
+  background-repeat: no-repeat;
+  background: cover;
+  margin: 0;
+  padding: 0;
+  height: 625px;
+  text-align: center;
+}
+/* line 9, /vagrant/myWebsite/app/assets/stylesheets/site_info.scss */
+#site-info div {
+  padding-top: 215px;
+  opacity: 0.95;
+}
+/* line 12, /vagrant/myWebsite/app/assets/stylesheets/site_info.scss */
+#site-info div div#info {
+  width: 75%;
+  background-color: red;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 20px;
+  color: white;
+  box-shadow: 0 0 5px grey;
+}
+/* line 22, /vagrant/myWebsite/app/assets/stylesheets/site_info.scss */
+#site-info div div#info a {
+  text-decoration: none;
+  color: black;
+}
+/* line 25, /vagrant/myWebsite/app/assets/stylesheets/site_info.scss */
+#site-info div div#info a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

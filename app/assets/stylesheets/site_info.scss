@@ -1,5 +1,5 @@
 #site-info {
-  background-image: url("/blackground.jpeg");
+  background-image: url("/blackground-compressor.jpeg");
   background-repeat: no-repeat;
   background: cover;
   margin: 0;
@@ -11,13 +11,16 @@
   	opacity: 0.95;
     div#info {
   	  width: 75%;
-	  background-color: red;
+	    background-color: red;
   	  margin: 0 auto;
   	  padding: 20px;
   	  border-radius: 5px;
   	  border: 2px solid black;
   	  font-size: 20px;
   	  color: white;
+      -o-box-shadow: 0 0 5px grey;
+      -webkit-box-shadow: 0 0 5px grey;
+      -moz-box-shadow: 0 0 5px grey;
   	  box-shadow: 0 0 5px grey;
   	  a {
   	  	text-decoration: none;
