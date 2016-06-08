@@ -28,19 +28,4 @@ app.factory('myJquery', ($interval) ->
       () ->
         $(this).stop().fadeOut(300)
         )
-  checkMobile: () ->
-    isMobile = 
-      Android: ->
-        navigator.userAgent.match /Android/i
-      BlackBerry: ->
-        navigator.userAgent.match /BlackBerry/i
-      iOS: ->
-        navigator.userAgent.match /iPhone|iPad|iPod/i
-      Opera: ->
-        navigator.userAgent.match /Opera Mini/i
-      Windows: ->
-        navigator.userAgent.match(/IEMobile/i) or navigator.userAgent.match(/WPDesktop/i)
-      any: ->
-        isMobile.Android() or isMobile.BlackBerry() or isMobile.iOS() or isMobile.Opera() or isMobile.Windows()
-    console.log(isMobile.any())
 )

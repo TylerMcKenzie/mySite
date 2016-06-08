@@ -1,12 +1,11 @@
 controllers = angular.module('controllers', [])
 
-controllers.controller("HomeController", ['$scope', '$location', 'myJquery', '$interval',
+controllers.controller("WebHomeCtrl", ['$scope', '$location', 'myJquery', '$interval',
   ($scope, $location, myJquery, $interval) -> 
     $scope.scrollTo = (id) ->
       myJquery.scrollTo(id)
 
 
-    myJquery.checkMobile()
     carousels = myJquery.startCarousels()
     carouselHover = myJquery.carouselHoverText()
     $scope.$on('$destroy', () ->
@@ -16,7 +15,17 @@ controllers.controller("HomeController", ['$scope', '$location', 'myJquery', '$i
 
 ])
 
-controllers.controller("InfoController", ['$scope', 
+controllers.controller("MobileHomeCtrl", ['$scope', 
+  ($scope) ->
+
+])
+
+controllers.controller("WebInfoCtrl", ['$scope', 
+  ($scope) ->
+
+])
+
+controllers.controller("MobileInfoCtrl", ['$scope', 
   ($scope) ->
 
 ])
