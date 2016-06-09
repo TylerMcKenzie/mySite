@@ -1,5 +1,6 @@
 app = angular.module('app', [
   'templates',
+  'ngTouch',
   'ngRoute',
   'controllers'
 ])
@@ -19,7 +20,6 @@ app.config(['$routeProvider', '$locationProvider',
         navigator.userAgent.match(/IEMobile/i) or navigator.userAgent.match(/WPDesktop/i)
       any: ->
         isMobile.Android() or isMobile.BlackBerry() or isMobile.iOS() or isMobile.Opera() or isMobile.Windows()
-
     $routeProvider
       .when('/',
         templateUrl: if !isMobile.any() then 'web/index.html' else 'mobile/index.html'
@@ -38,4 +38,5 @@ app.config(['$routeProvider', '$locationProvider',
         redirectTo: '/'
       )
     $locationProvider.html5Mode(true)
+    return
 ])

@@ -27,5 +27,5 @@ app.factory('myJquery', ($interval) ->
     $(".hover-text").mouseleave(
       () ->
         $(this).stop().fadeOut(300)
-        )
+    )
 )
