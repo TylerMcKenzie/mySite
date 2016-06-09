@@ -1,5 +1,7 @@
 controllers = angular.module('controllers', [])
 
+# Web ----
+
 controllers.controller("WebHomeCtrl", ['$scope', '$location', 'myJquery', '$interval',
   ($scope, $location, myJquery, $interval) -> 
     $scope.scrollTo = (id) ->
@@ -15,17 +17,21 @@ controllers.controller("WebHomeCtrl", ['$scope', '$location', 'myJquery', '$inte
 
 ])
 
-controllers.controller("MobileHomeCtrl", ['$scope', 
-  ($scope) ->
-
-])
-
 controllers.controller("WebInfoCtrl", ['$scope', 
   ($scope) ->
 
 ])
 
-controllers.controller("MobileInfoCtrl", ['$scope', 
-  ($scope) ->
+# Mobile ----
+
+controllers.controller("MobileHomeCtrl", ['$scope', 'myJquery', 
+  ($scope, myJquery) ->
+    $scope.openHMenu = () ->
+      myJquery.openNav()
+
+])
+
+controllers.controller("MobileInfoCtrl", ['$scope', 'myJquery',
+  ($scope, myJquery) ->
 
 ])

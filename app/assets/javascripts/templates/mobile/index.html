@@ -1,2 +1,10 @@
-hello
-<a href="/site-info">next</a>
+<nav class="mobile-nav">
+  <div>Tyler Mckenzie</div>
+  <button><img src="/threelines.png"></button>
+  <ul mobile-menu class="mobile-nav-ul">
+    <li><a ng-href="/" ng-click="mobileScrollTo('projects')">Projects</a></li>
+    <li><a ng-href="/" ng-click="mobileScrollTo('pens')">Pens</a></li>
+    <li><a ng-href="/" ng-click="mobileScrollTo('contact')">Contact</a></li>
+    <li><a ng-href="/site-info">Site Info</a></li>
+  </ul>
+</nav>
