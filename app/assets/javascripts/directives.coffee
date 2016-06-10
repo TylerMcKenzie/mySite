@@ -6,9 +6,6 @@ app.directive('mobileMenu', () ->
   	btn.on('click', (e) ->
   	  navHeight = elm.parent().outerHeight()
   	  elm.toggleClass('open')
-  	  if elm.hasClass('open')
-  	  	elm.stop().animate({top: navHeight})
-  	  else
-  	    elm.stop().animate({top: -navHeight})
+  	  if elm.hasClass('open') then elm.stop().animate({top: navHeight}, ()-> elm.toggleClass('front')) else elm.stop().animate({top: -navHeight}, () -> elm.toggleClass('front'))
   	)
   )
