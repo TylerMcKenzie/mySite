@@ -26,11 +26,15 @@
   border: none;
 }
 /* line 23, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
+.mobile-nav button:focus {
+  outline: none;
+}
+/* line 26, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
 .mobile-nav button img {
   height: 75px;
   width: 100px;
 }
-/* line 28, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
+/* line 31, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
 .mobile-nav ul {
   background-color: #780703;
   float: right;
@@ -42,7 +46,7 @@
   position: absolute;
   display: none;
 }
-/* line 39, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
+/* line 42, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
 .mobile-nav ul li {
   padding: 0;
   line-height: 40px;
@@ -50,26 +54,26 @@
   margin: 0;
   border-bottom: 1px solid black;
 }
-/* line 45, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
+/* line 48, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
 .mobile-nav ul li a {
   display: block;
   color: white;
 }
 
-/* line 54, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
+/* line 57, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
 #mobile-contact ul {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: center;
 }
-/* line 59, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
+/* line 62, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
 #mobile-contact ul li {
   display: inline-block;
   padding: 10px 10px;
   margin: 0;
 }
-/* line 64, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
+/* line 67, /vagrant/myWebsite/app/assets/stylesheets/mobile/mobile-home.scss */
 #mobile-contact ul li a img {
   width: 40px;
 }
