@@ -20,6 +20,9 @@
   	margin: 0;
   	background: none;
   	border: none;
+    &:focus {
+      outline: none;
+    }
   	img {
   	  height: 75px; 
   	  width: 100px;
