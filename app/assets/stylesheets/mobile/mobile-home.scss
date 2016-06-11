@@ -34,8 +34,8 @@
     text-align: center;
     width: 100%;
 	  position: absolute;
-    z-index: -1;
-	  top: -100px;
+	  // top: -200px;
+    display: none;
     li {
       padding: 0;
       line-height: 40px;
@@ -49,6 +49,22 @@
 	  }
   }
 }
-// .front {
-//   z-index: 1;
-// }
+
+#mobile-contact {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: 10px 10px;
+      margin: 0;
+      a {
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+}
