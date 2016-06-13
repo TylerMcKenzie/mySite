@@ -24,10 +24,18 @@ controllers.controller("WebInfoCtrl", ['$scope',
 
 # Mobile ----
 
-controllers.controller("MobileHomeCtrl", ['$scope', 'myJquery', 
-  ($scope, myJquery) ->
+controllers.controller("MobileHomeCtrl", ['$scope', 'myJquery', '$interval',
+  ($scope, myJquery, $interval) ->
     $scope.openHMenu = () ->
       myJquery.openNav()
+    $scope.mobileScrollTo = (id) ->
+      myJquery.scrollTo(id)
+
+    mobileC = myJquery.startCarousels()
+    $scope.$on('$destroy', () ->
+      if angular.isDefined(mobileC)
+        $interval.cancel(mobileC)
+    )
 
 ])
 

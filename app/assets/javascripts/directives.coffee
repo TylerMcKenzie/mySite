@@ -10,6 +10,6 @@ app.directive('mobileMenu', () ->
   	  if elm.hasClass('open') then elm.stop().animate({height: 'toggle'}) else elm.stop().animate({height: 'toggle'})
   	)
   	elm.on('click', (e) ->
-  	  console.log(e.target)
+  	  if elm.hasClass('open') then elm.stop().animate({height: 'toggle'}) else elm.stop().animate({height: 'toggle'})
   	)
   )

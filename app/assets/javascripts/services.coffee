@@ -8,8 +8,10 @@ app.factory('myJquery', ($interval) ->
       1000)
       false
   startCarousels: () ->
+    console.log($(".carousel_inner ul"))
+    carousels = $(".mobile-carousel_inner ul")
     start = () ->
-      $(".carousel_inner ul").each(() ->
+      carousels.each(() ->
         time = Math.random() * (2000 - 500) + 500
         indent = ($(this).children("li").outerWidth() + 5)*-1
         $(this).animate({'left': indent}, time, () ->

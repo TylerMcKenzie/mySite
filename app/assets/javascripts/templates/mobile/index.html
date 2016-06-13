@@ -2,13 +2,73 @@
   <div>Tyler Mckenzie</div>
   <button><img src="/threelines.png"></button>
   <ul mobile-menu class="mobile-nav-ul">
-    <li><a ng-href="/" ng-click="mobileScrollTo('projects')">Projects</a></li>
-    <li><a ng-href="/" ng-click="mobileScrollTo('pens')">Pens</a></li>
+    <li><a ng-href="/" ng-click="mobileScrollTo('mobile-projects')">Projects</a></li>
+    <li><a ng-href="/" ng-click="mobileScrollTo('mobile-pens')">Pens</a></li>
     <li><a ng-href="/" ng-click="mobileScrollTo('mobile-contact')">Contact</a></li>
     <li><a ng-href="/site-info">Site Info</a></li>
   </ul>
 </nav>
 
+<p id="mobile-about">I'm Tyler, a passionate web developer seeking new opportunities. <br> I enjoy using Javascript/Coffee-script, Sass/Scss, and Rails to create fun and complex web applications.</p>
+
+<div id="mobile-projects">
+  <ul id="mobile-projects_ul">
+    <li>
+      <p>ProjectZe</p>
+      <div class="carousel_container">
+        <div class="mobile-carousel_inner hover-t">
+          <a ng-href="http://projectze.herokuapp.com" target="_blank">
+          <ul>
+            <li><img src="/project-ze-screenshot-3.png"></li>
+            <li><img src="/project-ze-screenshot-1.png"></li>
+            <li><img src="/project-ze-screenshot-2.png"></li>
+            <li><img src="/project-ze-screenshot-4.png"></li>
+          </ul></a>
+        </div>
+        <div class="hover-text">
+        <a ng-href="http://projectze.herokuapp.com" target="_blank">
+            <p>ProjectZe</p>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <p>BuildoutApp</p>
+      <div class="carousel_container">
+        <div class="mobile-carousel_inner hover-t">
+        <a ng-href="http://mybuildoutapp.herokuapp.com" target="_blank">
+          <ul>
+            <li><img src="/buildout-screenshot-1.png"></li>
+            <li><img src="/buildout-screenshot-2.png"></li>
+            <li><img src="/buildout-screenshot-3.png"></li>
+          </ul></a>
+        </div>
+        <div class="hover-text">
+        <a ng-href="http://mybuildoutapp.herokuapp.com" target="_blank">
+            <p>BuildoutApp</p>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <p>MyEasyBudget</p>
+      <div class="carousel_container">
+        <div class="mobile-carousel_inner hover-t">
+        <a ng-href="http://myeasybudget.herokuapp.com" target="_blank">
+          <ul>
+            <li><img src="/myeasybudget-screenshot-1.png"></li>
+            <li><img src="/myeasybudget-screenshot-2.png"></li>
+          </ul></a>
+        </div>
+        <div class="hover-text">
+        <a ng-href="http://myeasybudget.herokuapp.com" target="_blank">
+            <p>MyEasyBudget</p>
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
 
 <div id="mobile-contact">
   <hr class="hr-text" data-content="CONTACT">
