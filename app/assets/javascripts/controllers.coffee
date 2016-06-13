@@ -31,7 +31,7 @@ controllers.controller("MobileHomeCtrl", ['$scope', 'myJquery', '$interval',
     $scope.mobileScrollTo = (id) ->
       myJquery.scrollTo(id)
 
-    mobileC = myJquery.startCarousels()
+    mobileC = myJquery.startMCarousels()
     $scope.$on('$destroy', () ->
       if angular.isDefined(mobileC)
         $interval.cancel(mobileC)
