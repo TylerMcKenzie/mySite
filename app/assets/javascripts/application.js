@@ -16,4 +16,5 @@
 //= require angular-route/angular-route
 //= require angular-rails-templates
 //= require angular-touch/angular-touch
+//= require gsap/src/minified/TweenMax.min.js
 //= require_tree .
