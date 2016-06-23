@@ -14,7 +14,7 @@ app.directive('mobileMenu', () ->
   	)
   )
 
-app.directive('svgAnim' , () ->
+app.directive('boxAnim' , () ->
   restrict: 'A',
   link: (scope, elm, attr) ->
     image = elm.find('#layer1')
@@ -37,4 +37,57 @@ app.directive('svgAnim' , () ->
     .from(path5, 1, { x: 3000, ease: Power2.easeOut }, '-=1')
     .to(image, 0.5, { rotation: -180, transformOrigin: '50% 50%', ease: Power0.easeIn })
     return
+)
+
+app.directive('spirAnim', () ->
+  restrict: 'A',
+  link: (scope, elm, attr) ->
+    spirals = elm.find('path')
+
+    posNeg = () -> 
+      random = Math.random()*(2-(0))+(0)
+      if random <= 1 
+        -1 
+      else 
+        1
+        
+    tl1 = new TimelineMax(repeat: -1)
+    rerunTl1 = (object) ->
+      i = 0
+      while i < object.length
+
+        randTime = Math.floor(Math.random()*(3-(2))+(2))
+        tl1.from(object[i], randTime, { 
+          rotation: 360, 
+          onComplete: rerunTl1,
+          onCompleteParams: [object[i]],
+          transformOrigin: "50% 50%", 
+          ease: Power0.easeOut 
+          }, '-='+randTime)
+        i++
+    rerunTl1(spirals)
+
+    rerunTl2 = (object) ->
+      i = 0
+      while i < object.length
+
+        dir = posNeg()
+        randTime = Math.random()*(4-(2))+(2)
+        randTop = Math.random()*(300-(0))+(0)
+        TweenMax.fromTo(object[i], randTime, { 
+          x: 1500*dir, 
+          y: randTop,
+          ease: Power0.easeOut
+           }, {
+          x: -1500*dir,
+          onComplete: rerunTl2, 
+          onCompleteParams: [object[i]],
+          repeatDelay: randTime-2,
+          ease: Power0.easeOut,
+          repeat: -1
+            }, '-=4')
+        i++
+    rerunTl2(spirals)
+
+
 )
