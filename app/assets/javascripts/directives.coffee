@@ -93,7 +93,7 @@ app = angular.module('app')
   link: (scope, elm, attr) ->
 
     # Ground Animation
-    gGroup = elm.find("g#ground")
+    gGroup = elm.find("#ground")
     ground = elm.find('#layer5')
 
     groundC = ground.clone()
@@ -106,7 +106,7 @@ app = angular.module('app')
 
     # Clouds Animation(s)
 
-    # First Group
+      # First Group
     cloudsG1 = elm.find('#cloud_g_1a')
     cloudG1 = elm.find('#layer3')
     cloudG1Of = cloudG1[0].getBoundingClientRect().width
@@ -118,7 +118,7 @@ app = angular.module('app')
     cloudTl1.set(cloudG1c, { x: cloudG1Of })
     cloudTl1.to(cloudsG1, 120, { x: -cloudG1Of, ease: Power0.easeOut })
     
-    # Second Group
+      # Second Group
 
     cloudsG2 = elm.find('#cloud_g_2a')
     cloudG2 = elm.find('#layer4')
@@ -133,4 +133,26 @@ app = angular.module('app')
     cloudTl2.set(cloudG2c, { x: cloudG2Of })
     cloudTl2.set(cloudG2c2, { x: -cloudG2Of })
     cloudTl2.to(cloudsG2, 80, { x: -cloudG2Of, ease: Power0.easeOut })
+
+    # Foreground hills
+
+    hills = elm.find('#layer2')
+    hillsW = hills[0].getBoundingClientRect().width
+
+    hillLoop = (obj) ->
+      dist = Math.random()*(2-(1))+(1)
+      time = Math.floor(Math.random()*(24-(18))+18)
+      TweenMax.fromTo(obj, time, { x: hillsW*dist, ease: Power0.easeOut }, { x: -hillsW, onComplete: hillLoop, onCompleteParams: [obj], ease: Power0.easeOut })
+    hillLoop(hills)
+
+    # Background Mountain
+
+    mount = elm.find('#layer6')
+
+    mounLoop = (obj) ->
+
+      mountW = mount[0].getBoundingClientRect().width
+      svgW = mount.parent()[0].getBoundingClientRect().width
+      TweenMax.fromTo(mount, 32, { x: svgW, ease: Power0.easeOut }, { x: -mountW, ease: Power0.easeOut, onComplete: mounLoop, onCompleteParams: [obj] })
+    mounLoop(mount)
 )
